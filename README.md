@@ -2,6 +2,10 @@
 
 This is an extension for BlackBoard that allows you to quickly select students to be added to your "Select Criteria" select form.
 
+You can find the extension [here on the Chrome Web Store](https://chrome.google.com/webstore/detail/easysmartview/bgcahmhbhhmceobbojnljbbfgbdcdpfo).
+
+<img src="https://i.imgur.com/gSJDOn3.jpg">
+
 ### Usage
 
 Simply install the extension and navigate to the [SmartView creation page](https://campus.fsu.edu/webapps/gradebook/do/instructor/addModifyCustomViews) for your specific recitation section.
