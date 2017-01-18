@@ -6,23 +6,43 @@
 </head>
 
 <body>
-    <section id="student-select">
+
+    <div class="container" id="student-select">
+
         <div class="row">
             <div class="col-md-12">
                 <h3 class="text-center">List Your Students</h3>
             </div>
+        </div>
+
+        <div class="row">
             <div class="col-md-12">
                 <textarea id="student-list" class="center-block" 
                  placeholder="Enter a new-line separated list of students. Format: 'lastname,firstname'"
                  rows="10" cols="40"></textarea>
             </div>
+        </div>
+
+        <div class="row">
             <div class="col-md-12">
-                <button id="select-students-btn" class="btn btn-primary center-block">Select Students</button>
+                <div class="btn-group special" role="group" aria-label="Actions">
+                    <button type="button" id="select-students-btn" class="btn btn-success">Select Students</button>
+                    <button type="button" id="clear-list-btn" class="btn btn-danger">Clear List</button>
+                </div>
             </div>
         </div>
-    </section>
-</body>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="btn-group special" role="group" aria-label="Actions">
+                    <button type="button" id="save-list-btn" class="btn btn-warning">Save List</button>
+                    <button type="button" id="load-list-btn" class="btn btn-warning">Load List</button>
+                </div>
+            </div>
+        </div>
 
-<script src="background.js"></script>
+    </div>
+
+    <script src="background.js"></script>
+</body>
 
 </html>

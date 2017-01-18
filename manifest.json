@@ -3,31 +3,36 @@
 
 	"name": "EasySmartView",
 	"version": "0.1.0",
-	"description": "Simplify SmartView creation",
+	"description": "Simplify SmartView Creation",
 
     "background": {
         "scripts": [
-            "ext/jquery-3.1.1.slim.min.js", "background.js"
+            "jquery-3.1.1.min.js",
+            "background.js"
         ]
     },
 
 	"browser_action": {
 		"default_icon": "img/icon.png",
 		"default_popup": "index.html",
-        "default_title": "SmartView Editor"
+        "default_title": "Smart View Student Selector"
     },
 
     "permissions": [
-        "activeTab", "storage"
+        "tabs", 
+        "activeTab", 
+        "storage", 
+        "https://campus.fsu.edu/webapps/gradebook/do/instructor/addModifyCustomViews/*"
     ],
 
-    "content_scripts": [
-        {
-            "matches": ["https://campus.fsu.edu/webapps/gradebook/do/instructor/addModifyCustomViews"],
-            "js": [
-                "content.js", "ext/jquery-3.1.1.slim.min.js"
-            ],
-            "runs_at": "document_end"
-        }
-    ]
+    "content_scripts": [{
+        "matches": [
+            "https://campus.fsu.edu/webapps/gradebook/do/instructor/addModifyCustomViews/*"
+        ],
+        "js": [
+            "jquery-3.1.1.min.js",
+            "content.js"
+        ],
+        "runs_at": "document_end"
+    }]
 }
