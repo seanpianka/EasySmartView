@@ -2,8 +2,13 @@
 	"manifest_version": 2,
 
 	"name": "EasySmartView",
-	"version": "0.1.0",
-	"description": "Simplify SmartView Creation",
+    "short_name": "EZSmartView",
+	"version": "1.0.0",
+	"description": "An extension for Blackboard that allows you to quickly select students for SmartView creation.",
+    "author": "Sean Pianka",
+    "homepage_url": "https://github.com/seanpianka/EasySmartView",
+
+    "default_locale": "en",
 
     "background": {
         "scripts": [
