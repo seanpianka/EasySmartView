@@ -26,6 +26,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="btn-group special" role="group" aria-label="Actions">
+                    <button type="button" id="save-list-btn" class="btn btn-warning">Save List</button>
                     <button type="button" id="select-students-btn" class="btn btn-success">Select Students</button>
                     <button type="button" id="clear-list-btn" class="btn btn-danger">Clear List</button>
                 </div>
@@ -34,9 +35,14 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="btn-group special" role="group" aria-label="Actions">
-                    <button type="button" id="save-list-btn" class="btn btn-warning">Save List</button>
-                    <button type="button" id="load-list-btn" class="btn btn-warning">Load List</button>
+                    <button type="button" id="load-list-storage-btn" class="btn btn-warning">Load List (storage)</button>
+                    <button type="button" id="load-list-pdf-btn" class="btn btn-warning">Load List (pdf)</button>
                 </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <input id="open-roster" type="file" name="roster" style="display: none;" />
             </div>
         </div>
 
