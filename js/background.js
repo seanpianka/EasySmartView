@@ -49,25 +49,30 @@ document.addEventListener('DOMContentLoaded', function() {
 		form_data.append('requiredfile_userfile', '1');
 
         // send post request with pdf to extracter
-        var url = "http://www.extractpdf.com/"
-        url = url + ((/\?/).test(url) ? "&" : "?") + new Date().getTime()
-		var http = createCORSRequest('POST', url, true);
+        var base_url = "http://www.extractpdf.com"
+        var url = base_url + ((/\?/).test(base_url) ? "&" : "?") + new Date().getTime()
 
-		if (!http) { throw new Error('CORS not supported.'); }
-        http.setRequestHeader(
-			"Content-type", 
-            "multipart/form-data; boundary=----WebKitFormBoundaryHfmWClWWbX7pw7rj"
-        );
-        xhr.overrideMimeType('text/plain; charset=x-user-defined');
-
-        http.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                res_html = $.parseHTML(http.responseText);
-                console.log(res_html);
-            }
-        };
-
-        http.send(form_data);
+		$.ajax({
+			type: "POST",
+			url: url,
+			data: form_data,
+			//use contentType, processData for sure.
+			contentType: false,
+			processData: false,
+			success: function(msg) {
+                var id = msg.match(/var url = (.*);/g)[0].split('\'')[1].split('\'')[0];
+                var url = base_url + id;
+                $.ajax({
+                    url: url,
+                    success: function(msg){
+                        res_html = $($.parseHTML(msg));
+                        students = res_html.find('#resultarea')[0].value.match(/^[\w]+,\w+$/gm);
+                        console.log(students);
+                        student_list_form.value = students.join("\r\n");
+                    }
+                });
+			}
+		});
 	});
 
     document.getElementById('select-students-btn').addEventListener('click', function() {
