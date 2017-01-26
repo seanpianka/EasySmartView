@@ -8,7 +8,7 @@
     "author": "Sean Pianka",
     "homepage_url": "https://github.com/seanpianka/EasySmartView",
 
-    "default_locale": "en",
+    "default_locale": "en_US",
 
     "background": {
         "scripts": [
