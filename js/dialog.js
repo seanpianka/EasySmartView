@@ -109,12 +109,5 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('load-list-pdf-btn').addEventListener('click', function() {
         // get pdf data
         $('#open-roster').trigger('click');
-
-        // https://stackoverflow.com/questions/28858027/how-to-read-file-from-chrome-extension
-        // https://stackoverflow.com/questions/38020515/chrome-extension-open-file-dialog-from-background-script
-        // https://stackoverflow.com/questions/14012348/how-to-use-chrome-extension-filesystem-api
-        // https://stackoverflow.com/questions/26884140/open-import-file-in-a-chrome-extension
-        // https://stackoverflow.com/questions/9713058/send-post-data-using-xmlhttprequest
-        // http://www.extractpdf.com/
     });
 });
