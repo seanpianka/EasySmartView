@@ -3,12 +3,10 @@
 
 	"name": "EasySmartView",
     "short_name": "EZSmartView",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "An extension for Blackboard that allows you to quickly select students for SmartView creation.",
     "author": "Sean Pianka",
     "homepage_url": "https://github.com/seanpianka/EasySmartView",
-
-    "default_locale": "en_US",
 
     "background": {
         "scripts": [
@@ -28,16 +26,14 @@
         "tabs", 
         "activeTab", 
         "storage", 
-        "*://campus.fsu.edu/webapps/gradebook/do/instructor/addModifyCustomViews/*",
-        "*://extractpdf.com/*",
-        "<all_urls>"
+        "*://*.campus.fsu.edu/webapps/gradebook/do/instructor/addModifyCustomViews/*",
+        "*://*.extractpdf.com/*"
     ],
 
     "content_scripts": [{
         "matches": [
             "*://campus.fsu.edu/webapps/gradebook/do/instructor/addModifyCustomViews/*",
-            "*://extractpdf.com/*",
-            "<all_urls>"
+            "*://*.extractpdf.com/*"
         ],
         "js": [
             "js/libs/jquery-3.1.1.min.js",
