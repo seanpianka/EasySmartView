@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     url: url,
                     success: function(msg){
                         res_html = $($.parseHTML(msg));
-                        students = res_html.find('#resultarea')[0].value.match(/^\w[\w\s,]*?$/gm);
+                        students = res_html.find('#resultarea')[0].value.match(/^(.+),\s*(.+)$/gm);
                         console.log(students);
                         student_list_form.value = students.join("\r\n");
                     }
